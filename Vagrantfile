@@ -24,18 +24,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ]
   end
 
-  config.vm.provision :shell, :path => "dotdeb.sh"
-  config.vm.provision :shell, :path => "base.sh" 
-  config.vm.provision :shell, :path => "apache_php.sh"
-  config.vm.provision :shell, :path => "mysql.sh"
+  config.vm.provision :shell, :path => "provision/dotdeb.sh"
+  config.vm.provision :shell, :path => "provision/base.sh" 
+  config.vm.provision :shell, :path => "provision/apache_php.sh"
+  config.vm.provision :shell, :path => "provision/mysql.sh"
 
-  # config.vm.provision :shell, :path => "memcached.sh"
-  # config.vm.provision :shell, :path => "nginx.sh"
-  # config.vm.provision :shell, :path => "redis-server.sh"
-  # config.vm.provision :shell, :path => "solr.sh"
-  # config.vm.provision :shell, :path => "varnish.sh"
+  # config.vm.provision :shell, :path => "provision/memcached.sh"
+  # config.vm.provision :shell, :path => "provision/nginx.sh"
+  # config.vm.provision :shell, :path => "provision/redis-server.sh"
+  # config.vm.provision :shell, :path => "provision/solr.sh"
+  # config.vm.provision :shell, :path => "provision/varnish.sh"
 
-  config.vm.provision :shell, :path => "oms.sh"
+  # Oh My Shell install script
+  config.vm.provision :shell, :path => "provision/oms.sh"
   
   # Install Drupal Demo Framework
   config.vm.provision :shell, :path => "install_demo.sh"
