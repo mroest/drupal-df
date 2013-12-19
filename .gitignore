@@ -1,2 +1,5 @@
+docroot/*
 .vagrant
+Berksfile.lock
+install_oms.sh
 
