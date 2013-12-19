@@ -1,5 +1,6 @@
 <VirtualHost *:80>
-        Servername demo.dev
+  ServerName demo
+  ServerAlias 10.22.22.22 demo.nl
 
 	DocumentRoot /vagrant/docroot
 	<Directory />
