@@ -28,8 +28,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :shell, :path => "provision/base.sh" 
   config.vm.provision :shell, :path => "provision/apache_php.sh"
   config.vm.provision :shell, :path => "provision/mysql.sh"
+  config.vm.provision :shell, :path => "provision/memcached.sh"
 
-  # config.vm.provision :shell, :path => "provision/memcached.sh"
   # config.vm.provision :shell, :path => "provision/nginx.sh"
   # config.vm.provision :shell, :path => "provision/redis-server.sh"
   # config.vm.provision :shell, :path => "provision/solr.sh"
