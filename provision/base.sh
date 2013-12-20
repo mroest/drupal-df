@@ -5,6 +5,16 @@ aptitude update
 aptitude install -y \
       vim \
       php5 \
+      php5-imagick \
+      php5-gd \
+      php5-mysql \
+      php5-curl \
+      php5-xdebug \
+      php5-zendopcache \
+      php5-memcache \
+      php5-memcached \
+      php5-redis \
+      php5-mcrypt \
       git \
       build-essential \
       drush \
@@ -15,4 +25,3 @@ aptitude install -y \
       zip \
       unzip \
       zsh
-

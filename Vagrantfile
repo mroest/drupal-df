@@ -42,5 +42,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Install Drupal Demo Framework
   config.vm.provision :shell, :path => "install_demo.sh"
   
-
 end

@@ -16,6 +16,6 @@ chmod -R 777 /vagrant/docroot/sites/default/files
 
 drush site-install df --site-name=demo --root=/vagrant/docroot -y
 
-cd /vagrant/docroot
-sh profiles/df/modules/dfs/dfs_wem/dfs_wem.sh
+#cd /vagrant/docroot
+#sh profiles/df/modules/dfs/dfs_wem/dfs_wem.sh
 
