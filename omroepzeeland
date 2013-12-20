@@ -1,6 +1,6 @@
 <VirtualHost *:80>
-  ServerName demo
-  ServerAlias 10.22.22.22 demo.nl
+  ServerName dev.omroepzeeland.nl
+  ServerAlias oz.dev 
 
 	DocumentRoot /vagrant/docroot
 	<Directory />
@@ -12,6 +12,9 @@
 		AllowOverride All
 		Order allow,deny
 		allow from all
+
+                RewriteEngine On
+
 	</Directory>
 </VirtualHost>
 
