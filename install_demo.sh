@@ -11,7 +11,11 @@ apache2ctl restart
 cp -a /vagrant/settings.php /vagrant/docroot/sites/default/
 mysql -u root -e "create database if not exists demo;" --password=root
 
-drush site-install df --site-name=demo --root=/vagrant/docroot -y
-
 mkdir -p /vagrant/docroot/sites/default/files
 chmod -R 777 /vagrant/docroot/sites/default/files
+
+drush site-install df --site-name=demo --root=/vagrant/docroot -y
+
+cd /vagrant/docroot
+sh profiles/df/modules/dfs/dfs_wem/dfs_wem.sh
+
