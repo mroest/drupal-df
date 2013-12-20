@@ -6,8 +6,9 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
-  # vagrant box add wheezy32 http://tools.swergroup.com/downloads/wheezy32.box
-  config.vm.box = "ib-deb71"
+  # Default vagrant box
+  config.vm.box = "wheezy72"
+  config.vm.box_url = "https://dl.dropboxusercontent.com/u/197673519/debian-7.2.0.box"
   
   config.vm.hostname = "demo"
   config.vm.network "private_network", ip: "10.22.22.22"
