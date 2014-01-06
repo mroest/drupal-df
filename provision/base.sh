@@ -5,6 +5,8 @@ aptitude update
 aptitude install -y \
       vim \
       php5 \
+      php5-common \
+      php5-cli \
       php5-imagick \
       php5-gd \
       php5-mysql \
