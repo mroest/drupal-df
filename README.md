@@ -21,4 +21,4 @@ The provisions scripts will meet the requirements except for the basebox. You ha
 
 ### Other things that you might want to changes
 
-+ Caching is disabled (don't no why)
++ Caching is disabled (don't know why)
