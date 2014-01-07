@@ -6,7 +6,8 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
-  # Default vagrant box
+  # Default vagrant box (get one from remote location)
+  # config.vm.box_url = "https://dl.dropboxusercontent.com/u/197673519/debian-7.2.0.box"
   config.vm.box = "ib-deb71"
   
   config.vm.hostname = "demo"
