@@ -19,8 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.customize [
       "modifyvm", :id,
       "--memory", 1024,
-      "--name", "demo",
-      "--cpuexecutioncap", "50"
+      "--name", "demo"
     ]
   end
 

@@ -10,15 +10,15 @@ a2ensite demo
 cd /vagrant
 drush make ./build-df.make ./docroot
 
-apache2ctl restart
+apache2ctl stop
+rm -rf /var/lock/apache2
+apache2ctl start
 
 cp -a /vagrant/settings.php /vagrant/docroot/sites/default/
 mysql -u root -e "create database if not exists demo;" --password=root
 
-mkdir -p /vagrant/docroot/sites/default/files
-chmod -R 777 /vagrant/docroot/sites/default/files
-
-drush site-install df --site-name=demo --root=/vagrant/docroot -y
-
 cd /vagrant/docroot
+drush site-install df --site-name=demo --sites-subdir=default -y
+drush cc all
 sh profiles/df/modules/dfs/dfs_wem/dfs_wem.sh
+
