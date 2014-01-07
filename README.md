@@ -1,5 +1,7 @@
-Drupal Demo Framework / DF
-=========
+# Drupal Demo Framework / DF
+
+This assumes that you want to install the DemoFramework in a Vagrant VM.
+
 You should install http://drupal.org/project/df as described on https://drupal.org/node/2012876.
 But since that didn't work for me and I went crazy on the ruby gems, chef and version dependencies
 I created a couple of simple shell scripts.
@@ -7,3 +9,14 @@ I created a couple of simple shell scripts.
 Installing a LAMP server and Drupal site isn't that hard and I believe you shouldn't have to install a shitload of ruby.
 
 Just make sure you have Vagrant and Virtualbox installed and try ./go.sh
+
+## Requirements
+
++ Debian wheezy 7.1 basebox (see Vagrantfile)
++ Enable the image_allow_insecure_derivatives configuration variable in your settings.php (see install script)
++ Drush version 5.10.0
++ Apache runs with vagrant userid to allow changes in /files
+
+### Other things that you might want to changes
+
++ Caching is disabled (don't no why)

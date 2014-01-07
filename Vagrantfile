@@ -35,9 +35,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.provision :shell, :path => "provision/redis-server.sh"
   # config.vm.provision :shell, :path => "provision/solr.sh"
   # config.vm.provision :shell, :path => "provision/varnish.sh"
-
-  # Oh My Shell install script
-  config.vm.provision :shell, :path => "provision/oms.sh"
+  # config.vm.provision :shell, :path => "provision/oms.sh"
   
   # Install Drupal Demo Framework
   config.vm.provision :shell, :path => "install_demo.sh"

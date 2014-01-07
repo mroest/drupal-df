@@ -7,6 +7,8 @@ aptitude install -y \
       php5 \
       php5-common \
       php5-cli \
+      php5-dev \
+      php-pear \
       php5-imagick \
       php5-gd \
       php5-mysql \
