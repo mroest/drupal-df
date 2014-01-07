@@ -17,6 +17,8 @@ Just make sure you have Vagrant and Virtualbox installed and try ./go.sh
 + Drush version 5.10.0
 + Apache runs with vagrant userid to allow changes in /files
 
+The provisions scripts will meet the requirements except for the basebox. You have to get your own basebox. Fetch one from http://www.vagrantbox.es or build one yourself (if you don't trust others). The Vagrantfile has an example on how to download one from a remote location.
+
 ### Other things that you might want to changes
 
 + Caching is disabled (don't no why)
