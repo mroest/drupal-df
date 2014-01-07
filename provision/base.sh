@@ -19,7 +19,6 @@ aptitude install -y \
       php5-mcrypt \
       git \
       build-essential \
-      drush \
       ant \
       wget \
       openjdk-6-jdk \
@@ -27,3 +26,7 @@ aptitude install -y \
       zip \
       unzip \
       zsh
+
+
+cat /vagrant/provision/xdebug.ini >> /etc/php5/mods-available/xdebug.ini
+

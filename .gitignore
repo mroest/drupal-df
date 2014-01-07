@@ -1,5 +1,6 @@
 docroot/*
 .vagrant
+.idea
 Berksfile.lock
 install_oms.sh
 

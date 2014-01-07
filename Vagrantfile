@@ -7,8 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   # Default vagrant box
-  config.vm.box = "wheezy72"
-  config.vm.box_url = "https://dl.dropboxusercontent.com/u/197673519/debian-7.2.0.box"
+  config.vm.box = "ib-deb71"
   
   config.vm.hostname = "demo"
   config.vm.network "private_network", ip: "10.22.22.22"
@@ -27,6 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :shell, :path => "provision/dotdeb.sh"
   config.vm.provision :shell, :path => "provision/base.sh" 
+  config.vm.provision :shell, :path => "provision/drush.sh"
   config.vm.provision :shell, :path => "provision/apache_php.sh"
   config.vm.provision :shell, :path => "provision/mysql.sh"
 
