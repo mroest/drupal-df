@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cd /vagrant
 drush make ./build-df.make ./docroot
 
 cp -a /vagrant/demo /etc/apache2/sites-available
