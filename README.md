@@ -19,6 +19,11 @@ Just make sure you have Vagrant and Virtualbox installed and try ./go.sh
 
 The provisions scripts will meet the requirements except for the basebox. You have to get your own basebox. Fetch one from http://www.vagrantbox.es or build one yourself (if you don't trust others). The Vagrantfile has an example on how to download one from a remote location.
 
+## Known issues
+
++ https://drupal.org/node/2168749
+In order to use the ember theme you should manually download the theme and put it in profiles/df/themes/contrib
+
 ### Other things that you might want to changes
 
 + Caching is disabled (don't know why)
