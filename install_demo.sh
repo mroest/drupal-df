@@ -1,5 +1,7 @@
 #!/bin/sh
 
+service apache2 stop
+
 perl -pi -w -e 's/www-data/vagrant/g;' /etc/apache2/envvars
 perl -pi -w -e 's/memory_limit = 128M/memory_limit = 512M/g;' /etc/php5/apache2/php.ini
 perl -pi -w -e 's/;date.timezone =/date.timezone = Europe\/Amsterdam/g;' /etc/php5/apache2/php.ini
@@ -11,7 +13,6 @@ a2ensite demo
 cd /vagrant
 drush make ./build-df.make ./docroot
 
-service apache2 stop
 rm -rf /var/lock/apache2
 service apache2 start
 
