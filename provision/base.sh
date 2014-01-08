@@ -30,5 +30,8 @@ aptitude install -y \
       zsh
 
 
+a2enmod rewrite
+a2enmod expires
+a2enmod headers
 cat /vagrant/provision/xdebug.ini >> /etc/php5/mods-available/xdebug.ini
 
