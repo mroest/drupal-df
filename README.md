@@ -21,8 +21,7 @@ The provisions scripts will meet the requirements except for the basebox. You ha
 
 ## Known issues
 
-+ https://drupal.org/node/2168749
-In order to use the ember theme you should manually download the theme and put it in profiles/df/themes/contrib
+
 
 ### Other things that you might want to changes
 
