@@ -11,9 +11,9 @@ a2ensite demo
 cd /vagrant
 drush make ./build-df.make ./docroot
 
-apache2ctl stop
+service apache2 stop
 rm -rf /var/lock/apache2
-apache2ctl start
+service apache2 start
 
 cp -a /vagrant/settings.php /vagrant/docroot/sites/default/
 mysql -u root -e "create database if not exists demo;" --password=root
@@ -23,3 +23,5 @@ drush site-install df --site-name=demo --sites-subdir=default -y
 drush cc all
 sh profiles/df/modules/dfs/dfs_wem/dfs_wem.sh
 
+drush upwd admin --password=demo
+drush upwd JenniferThomson --password=demo
