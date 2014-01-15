@@ -10,11 +10,11 @@ perl -pi -w -e 's/;date.timezone =/date.timezone = Europe\/Amsterdam/g;' /etc/ph
 cp -a /vagrant/demo /etc/apache2/sites-available
 a2ensite demo
 
-cd /vagrant
-drush make ./build-df.make ./docroot
-
 rm -rf /var/lock/apache2
 service apache2 start
+
+cd /vagrant
+drush make ./build-df.make ./docroot
 
 cp -a /vagrant/settings.php /vagrant/docroot/sites/default/
 mysql -u root -e "create database if not exists demo;" --password=root
